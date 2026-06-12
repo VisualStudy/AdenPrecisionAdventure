@@ -1,0 +1,23 @@
+Traceback (most recent call last):
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 2270, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 2262, in main
+    game.handle_events()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 2226, in handle_events
+    self.load_level(self.level_index + 1)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 1619, in load_level
+    self.level = Level(self.level_paths[index])
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 1272, in __init__
+    self._load()
+    ~~~~~~~~~~^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 1333, in _load
+    self.boss = HumanBoss(wx, wy)
+                ~~~~~~~~~^^^^^^^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_2_pixel_character_fix\main.py", line 730, in __init__
+    super().__init__(x - 16, y - 42, HUMAN_BOSS_FRAMES, 32)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BossEnemy.__init__() takes 3 positional arguments but 5 were given
