@@ -1,3 +1,19 @@
+Aden's Needle Trial v9.1 - Character Hotfix
+===========================================
+
+v9.1 수정 사항
+--------------
+- 실행 중 발생하던 NameError: name 'BreakableBox' is not defined 오류 수정
+- v9 캐릭터 업그레이드 작업 중 빠졌던 BreakableBox / ItemPickup 클래스 정의 복구
+- Q 상자 로딩, 상자 업데이트, 아이템 드롭 구조를 다시 연결
+- 관리자 모드 캐릭터 스킨 적용 유지
+- 기본 aden 고급 애니메이션 유지
+- main.py 컴파일 확인 완료
+
+중요
+----
+기존 v9 폴더에서 실행하지 말고, 이 v9.1 zip을 새 폴더에 압축 해제한 뒤 실행하세요.
+
 Aden's Needle Trial v8.2 - Admin Shoot Fix
 ==========================================
 

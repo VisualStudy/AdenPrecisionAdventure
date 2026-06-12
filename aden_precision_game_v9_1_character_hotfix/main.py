@@ -494,6 +494,45 @@ class PlayerShot(pygame.sprite.Sprite):
         if self.rect.right < -200 or self.rect.left > 5000:
             self.kill()
 
+
+class BreakableBox(pygame.sprite.Sprite):
+    item_cycle = ["shield", "laser", "heal", "levelup"]
+
+    def __init__(self, x, y, item_kind=None):
+        super().__init__()
+        self.frames = BREAK_BOX_FRAMES
+        self.frame = 0
+        self.image = self.frames[0]
+        self.rect = self.image.get_rect(topleft=(x, y))
+        if item_kind is None:
+            tile_index = (x // TILE_SIZE + y // TILE_SIZE) % len(self.item_cycle)
+            item_kind = self.item_cycle[tile_index]
+        self.item_kind = item_kind
+        self.health = 2
+
+    def update(self):
+        self.frame = (self.frame + 1) % 30
+        self.image = self.frames[0 if self.frame < 15 else 1]
+
+    def take_damage(self, amount):
+        self.health -= amount
+        return self.health <= 0
+
+
+class ItemPickup(pygame.sprite.Sprite):
+    def __init__(self, x, y, kind):
+        super().__init__()
+        self.kind = kind
+        self.image = ITEM_IMAGES[kind]
+        self.rect = self.image.get_rect(center=(x, y))
+        self.base_y = self.rect.y
+        self.timer = 0
+
+    def update(self):
+        self.timer += 1
+        self.rect.y = self.base_y + int(math.sin(self.timer * 0.13) * 5)
+
+
 class EnemyBullet(pygame.sprite.Sprite):
     def __init__(self, x, y, vx, vy=0):
         super().__init__()
