@@ -1,0 +1,19 @@
+Traceback (most recent call last):
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_character_upgrade\main.py", line 2228, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_character_upgrade\main.py", line 2217, in main
+    game = Game()
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_character_upgrade\main.py", line 1404, in __init__
+    self.load_level(0, reset_deaths=True)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_character_upgrade\main.py", line 1577, in load_level
+    self.level = Level(self.level_paths[index])
+                 ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_character_upgrade\main.py", line 1230, in __init__
+    self._load()
+    ~~~~~~~~~~^^
+  File "C:\Users\박지호\source\repos\AdenPrecisionAdventure\aden_precision_game_v9_character_upgrade\main.py", line 1269, in _load
+    self.boxes.add(BreakableBox(wx, wy))
+                   ^^^^^^^^^^^^
+NameError: name 'BreakableBox' is not defined
